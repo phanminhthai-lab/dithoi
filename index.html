@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chạm Vào Mây Ngàn - Hành Trình Di Linh Bảo Lộc</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    body { background:#fcfcfc; color:#333; scroll-behavior:smooth }
+    .hero-bg {
+      background-image: linear-gradient(rgba(27,67,50,.4), rgba(27,67,50,.7)), url('https://images.unsplash.com/photo-1596522354195-e84ae3c987dd?q=80&w=1920&auto=format&fit=crop');
+      background-size: cover; background-position:center; background-attachment:fixed;
+    }
+  </style>
+</head>
+<body class="antialiased overflow-hidden">
+
+<!-- HERO -->
+<header class="hero-bg h-[80vh] flex items-center justify-center text-white text-center">
+  <div class="bg-white/90 text-gray-800 p-8 rounded-3xl max-w-2xl">
+    <h1 class="text-4xl font-bold mb-4">CHẠM VÀO MÂY NGÀN</h1>
+    <p>Di Linh - Bảo Lộc | 3 ngày 2 đêm</p>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-16">
+
+<!-- ẢNH -->
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+     loading="lazy"
+     onerror="this.onerror=null;this.src='https://via.placeholder.com/800x400?text=Image+Not+Available'"
+     class="rounded-xl w-full h-64 object-cover mb-6">
+
+<img src="https://via.placeholder.com/800x400?text=Linh+Quy+Phap+An"
+     loading="lazy"
+     onerror="this.onerror=null;this.src='https://via.placeholder.com/800x400?text=Image+Not+Available'"
+     class="rounded-xl w-full h-64 object-cover mb-6">
+
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80"
+     loading="lazy"
+     onerror="this.onerror=null;this.src='https://via.placeholder.com/800x400?text=Image+Not+Available'"
+     class="rounded-xl w-full h-64 object-cover mb-6">
+
+<img src="https://via.placeholder.com/800x400?text=Thac+Dambri"
+     loading="lazy"
+     onerror="this.onerror=null;this.src='https://via.placeholder.com/800x400?text=Image+Not+Available'"
+     class="rounded-xl w-full h-64 object-cover mb-6">
+
+</main>
+
+<!-- FIX GLOBAL IMAGE -->
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.src || img.src.trim() === '') {
+      img.src = 'https://via.placeholder.com/800x400?text=Image+Not+Available';
+    }
+    img.onerror = () => {
+      img.onerror = null;
+      img.src = 'https://via.placeholder.com/800x400?text=Image+Not+Available';
+    };
+  });
+});
+</script>
+
+</body>
+</html>
